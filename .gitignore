@@ -1,0 +1,15 @@
+__pycache__/
+*.pyc
+.venv/
+venv/
+.ipynb_checkpoints/
+.DS_Store
+
+# raw API downloads (~400 MB) are re-created by `python main.py` -> 1
+data/raw/
+*.part
+data/download.log
+
+# large generated files
+data/kz_climate.db
+models/*.joblib
