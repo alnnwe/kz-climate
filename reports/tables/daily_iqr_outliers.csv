@@ -1,0 +1,14 @@
+city,outliers,low_outliers,days,outlier_pct
+Astana,220,196,31722,0.69
+Almaty,337,312,31722,1.06
+Shymkent,287,245,31722,0.9
+Karaganda,223,211,31722,0.7
+Aktobe,210,191,31722,0.66
+Pavlodar,242,218,31722,0.76
+Oskemen,270,249,31722,0.85
+Atyrau,319,296,31722,1.01
+Aktau,306,289,31722,0.96
+Kostanay,204,186,31722,0.64
+Kyzylorda,236,208,31722,0.74
+Petropavl,215,195,31722,0.68
+Oral,177,167,31722,0.56

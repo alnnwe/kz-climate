@@ -1,0 +1,51 @@
+{
+  "dtype_optimisation": {
+    "city": "Astana",
+    "rows": 761352,
+    "memory_default_mb": 50.8,
+    "memory_optimised_mb": 18.2,
+    "reduction_pct": 64.3,
+    "dtypes_default": {
+      "city": "str",
+      "time": "str",
+      "temperature_2m": "float64",
+      "relative_humidity_2m": "int64",
+      "surface_pressure": "float64",
+      "precipitation": "float64"
+    },
+    "dtypes_optimised": {
+      "city": "category",
+      "time": "datetime64[us]",
+      "temperature_2m": "float32",
+      "relative_humidity_2m": "float32",
+      "surface_pressure": "float32",
+      "precipitation": "float32"
+    },
+    "estimated_full_default_mb": 661.0,
+    "estimated_full_optimised_mb": 236.0
+  },
+  "parquet_build": {
+    "chunks": 117,
+    "rows_in": 9897576,
+    "rows_out": 9897576,
+    "range_violations": {
+      "temperature_2m": 0,
+      "relative_humidity_2m": 0,
+      "surface_pressure": 0,
+      "precipitation": 0
+    },
+    "duplicates_removed": 0,
+    "parquet_size_mb": 109.5,
+    "raw_csv_size_mb": 416.6,
+    "seconds": 48.406,
+    "peak_mb": 14.6
+  },
+  "audit_summary": {
+    "cities": 13,
+    "total_rows": 9897576,
+    "missing_timestamps": 0,
+    "duplicate_timestamps": 0,
+    "na_temperature": 0
+  },
+  "daily_rows": 412386
+}

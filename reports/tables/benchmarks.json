@@ -1,0 +1,50 @@
+[
+  {
+    "approach": "A1 pandas CSV full load",
+    "seconds": 10.64,
+    "peak_rss_mb": 2427.0,
+    "extra_over_baseline_mb": 2185.8,
+    "max_abs_diff_vs_reference": 0.0,
+    "storage_mb": 416.6
+  },
+  {
+    "approach": "A2 pandas CSV chunksize",
+    "seconds": 8.38,
+    "peak_rss_mb": 324.0,
+    "extra_over_baseline_mb": 82.5,
+    "max_abs_diff_vs_reference": 0.0,
+    "storage_mb": 416.6
+  },
+  {
+    "approach": "A3 pandas Parquet (all columns)",
+    "seconds": 1.54,
+    "peak_rss_mb": 1450.5,
+    "extra_over_baseline_mb": 1209.4,
+    "max_abs_diff_vs_reference": 0.0,
+    "storage_mb": 109.5
+  },
+  {
+    "approach": "A4 pandas Parquet (3 columns)",
+    "seconds": 0.96,
+    "peak_rss_mb": 1115.7,
+    "extra_over_baseline_mb": 874.7,
+    "max_abs_diff_vs_reference": 0.0,
+    "storage_mb": 109.5
+  },
+  {
+    "approach": "B1 pandas (daily Parquet)",
+    "seconds": 0.1,
+    "peak_rss_mb": 309.6,
+    "extra_over_baseline_mb": 68.4,
+    "max_abs_diff_vs_reference": 0.0,
+    "storage_mb": 8.7
+  },
+  {
+    "approach": "B2 SQL (SQLite)",
+    "seconds": 0.48,
+    "peak_rss_mb": 253.6,
+    "extra_over_baseline_mb": 12.4,
+    "max_abs_diff_vs_reference": 0.0001,
+    "storage_mb": 128.7
+  }
+]

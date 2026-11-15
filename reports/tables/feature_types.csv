@@ -1,0 +1,16 @@
+column,dtype,type,missing
+city,category,categorical,0
+date,datetime64[us],datetime,0
+tmean,float32,numeric continuous,0
+tmax,float32,numeric continuous,0
+tmin,float32,numeric continuous,0
+dew_point,float32,numeric continuous,0
+humidity,float32,numeric continuous,0
+humidity_min,float32,numeric continuous,0
+precipitation,float32,numeric continuous,0
+precip_hours,float32,numeric continuous,0
+pressure,float32,numeric continuous,0
+pressure_range,float32,numeric continuous,0
+n_hours,int8,numeric discrete (count),0
+t_23h,float32,numeric continuous,0
+pressure_23h,float32,numeric continuous,0

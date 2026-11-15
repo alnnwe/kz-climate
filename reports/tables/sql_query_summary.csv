@@ -1,0 +1,13 @@
+query,title,features,rows,seconds
+q01_decade_means,Mean annual temperature by city and decade,"JOIN, GROUP BY, computed column",117,0.441
+q02_warming_rank,"Warming 1991-2020 vs 1961-1990 per city, ranked","CTE, conditional aggregation, RANK() window",13,0.068
+q03_rolling_annual,Annual mean temperature with 10-year moving average,"CTE, AVG() OVER (ROWS BETWEEN 9 PRECEDING AND CURRENT ROW)",1118,0.15
+q04_record_days,Hottest and coldest day ever recorded in each city,"ROW_NUMBER() window in subquery, UNION ALL",26,0.85
+q05_hot_days_having,Cities with more than 100 days of Tmax >= 35 °C in 2011-2025,GROUP BY + HAVING,6,0.046
+q06_yoy_lag,"Year-over-year change of annual mean (Astana, Almaty)","CTE, LAG() window",172,0.044
+q07_waves_by_decade_zone,Heat and cold waves per decade and macro-zone,"4-table JOIN, GROUP BY",45,0.007
+q08_anomalous_cold_subquery,January days at least 15 °C colder than the city's January norm,"subquery in FROM (derived table) + JOIN; the correlated-subquery version took ~80 s, this one <1 s",13,0.06
+q09_frost_free_season,Frost-free season length by decade (last spring / first autumn frost),"multiple CTEs, JOIN of CTEs, julianday arithmetic",117,0.14
+q10_longest_heat_wave,Longest heat wave per city,JOIN + window ROW_NUMBER over events,13,0.008
+q11_model_leaderboard,Forecast model leaderboard on the test period (all cities),"JOIN, aggregation, RANK() window, subquery for improvement over persistence",8,0.08
+q12_diurnal_cycle,"Mean diurnal temperature cycle (local hour) in January and July, recent hourly data","hourly table, GROUP BY on derived columns, CASE",48,0.06

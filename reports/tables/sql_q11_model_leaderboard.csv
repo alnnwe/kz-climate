@@ -1,0 +1,9 @@
+model_name,family,mae,rmse,n,improvement_vs_persistence_pct,rank
+HistGB + spatial,ml,1.39,1.885,27781,37.3,1
+HistGB,ml,1.503,2.038,27781,32.2,2
+Ridge (lags),ml,1.664,2.23,27781,24.9,3
+"ARIMA(2,0,1)",statistical,2.073,2.83,27781,6.4,4
+Persistence,baseline,2.215,3.101,27781,0.0,5
+Moving average 3d,baseline,2.9,3.914,27781,-30.9,6
+Climatology,baseline,4.079,5.144,27781,-84.1,7
+Seasonal naive,baseline,5.123,6.711,27781,-131.3,8

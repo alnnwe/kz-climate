@@ -1,0 +1,7 @@
+approach,seconds,peak_rss_mb,extra_over_baseline_mb,max_abs_diff_vs_reference,storage_mb
+A1 pandas CSV full load,10.64,2427.0,2185.8,0.0,416.6
+A2 pandas CSV chunksize,8.38,324.0,82.5,0.0,416.6
+A3 pandas Parquet (all columns),1.54,1450.5,1209.4,0.0,109.5
+A4 pandas Parquet (3 columns),0.96,1115.7,874.7,0.0,109.5
+B1 pandas (daily Parquet),0.1,309.6,68.4,0.0,8.7
+B2 SQL (SQLite),0.48,253.6,12.4,0.0001,128.7

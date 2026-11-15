@@ -1,0 +1,91 @@
+erDiagram
+    REGIONS ||--o{ CITIES : contains
+    CITIES ||--o{ DAILY_WEATHER : has
+    CITIES ||--o{ HOURLY_WEATHER : has
+    CITIES ||--o{ EXTREME_EVENTS : experiences
+    EVENT_TYPES ||--o{ EXTREME_EVENTS : classifies
+    CITIES ||--o{ FORECASTS : "is forecast for"
+    MODELS ||--o{ FORECASTS : produces
+    MODELS ||--o{ MODEL_METRICS : "is scored by"
+    CITIES |o--o{ MODEL_METRICS : "scope (NULL = all)"
+
+    REGIONS {
+        int region_id PK
+        text region_name UK
+        text macro_zone
+    }
+    CITIES {
+        int city_id PK
+        text city_name UK
+        int region_id FK
+        real latitude
+        real longitude
+        real grid_lat
+        real grid_lon
+        real elevation_m
+    }
+    DAILY_WEATHER {
+        int city_id PK,FK
+        text date PK
+        real tmean
+        real tmax
+        real tmin
+        real dew_point
+        real humidity
+        real humidity_min
+        real precipitation
+        real precip_hours
+        real pressure
+        real pressure_range
+        real t_23h
+        real pressure_23h
+        int n_hours
+    }
+    HOURLY_WEATHER {
+        int city_id PK,FK
+        text time_utc PK
+        real temperature
+        real humidity
+        real pressure
+        real precipitation
+    }
+    EVENT_TYPES {
+        int event_type_id PK
+        text code UK
+        text description
+        text rule
+    }
+    EXTREME_EVENTS {
+        int event_id PK
+        int city_id FK
+        int event_type_id FK
+        text start_date
+        text end_date
+        int duration_days
+        real peak_value
+        real mean_exceedance
+    }
+    MODELS {
+        int model_id PK
+        text model_name UK
+        text family
+        text description
+    }
+    FORECASTS {
+        int city_id PK,FK
+        int model_id PK,FK
+        text date PK
+        real y_true
+        real y_pred
+    }
+    MODEL_METRICS {
+        int model_id FK
+        int city_id FK
+        text split
+        real mae
+        real rmse
+        real smape
+        real mase
+        real train_seconds
+        real predict_seconds
+    }

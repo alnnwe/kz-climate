@@ -1,0 +1,6 @@
+series,n,adf_stat,adf_p,kpss_stat,kpss_p,verdict
+daily tmean (raw),31722,-17.382,0.0,0.105,0.1,stationary
+daily anomaly,31722,-31.238,0.0,3.519,0.01,mixed (trend/seasonal)
+monthly mean,1032,-4.674,0.0001,0.095,0.1,stationary
+annual mean,86,-2.668,0.0798,1.084,0.01,non-stationary
+annual mean (1st difference),85,-5.614,0.0,0.298,0.1,stationary

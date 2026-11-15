@@ -1,0 +1,14 @@
+{
+  "mase_scale_persistence_train_mae": 2.2936,
+  "histgb_params": {
+    "learning_rate": 0.05,
+    "max_leaf_nodes": 63,
+    "max_iter": 400
+  },
+  "n_fit_rows": 337129,
+  "n_test_rows": 27781,
+  "test_period": [
+    "2021-01-01",
+    "2026-11-07"
+  ]
+}
